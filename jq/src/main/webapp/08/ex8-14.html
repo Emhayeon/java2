@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex8-14.html</title>
+<style>
+	.red{
+		background-color: red;
+		color: white;
+	}
+	.blue{
+		background-color:skyblue;
+		color: white;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#btnRed").click(function(){
+		$("h2").removeClass("red"); //(".red")적으면 안됨
+	});
+	$("#btnBlue").click(function(){
+		$("p").removeClass("blue");
+	});
+});	
+</script>
+</head>
+<body>
+	<h2 class="red">제목 1</h2>
+	<p class="blue">단락 1</p>
+	<h2 class="red">제목 2</h2>
+	<p class="blue">단락 2</p>
+	<button type="button" id="btnRed">RED</button>
+	<button type="button" id="btnBlue">BLUE</button>
+</body>
+</html>

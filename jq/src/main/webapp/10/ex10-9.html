@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-9.html</title>
+<style>
+	div{
+		width: 500px;
+		height: 300px;
+		background-color: yellow;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){	
+	$("#btnHide").click(function(){
+		$("div").hide(1000, function(){
+			alert("숨겼어요");
+		}); 
+	});
+	$("#btnShow").click(function(){
+		$("div").show(1000, function(){
+			alert("나타났어요");
+		});
+	});	
+	$("#btnToggle").click(function(){
+		$("div").toggle(1000, function(){
+			alert("번갈았어요");
+		});
+	});
+	$("#btnFadeIn").click(function(){
+		$("div").fadeIn(1000);
+	});
+	$("#btnFadeOut").click(function(){
+		$("div").fadeOut(1000);
+	});	
+	$("#btnFadetoggle").click(function(){
+		$("div").fadeToggle(1000);
+	});
+	$("#btnSlideUp").click(function(){
+		$("div").slideUp(1000);
+	});
+	$("#btnSlideDown").click(function(){
+		$("div").slideDown(1000);
+	});
+	$("#btnSlideToggle").click(function(){
+		$("div").slideToggle(1000);
+	});
+			
+});		
+</script>
+</head>
+<body>
+	<button id="btnHide">hide</button>
+	<button id="btnShow">show</button>
+	<button id="btnToggle">toggle</button>
+	<button id="btnFadeIn">fadeIn</button>
+	<button id="btnFadeOut">fadeOut</button>
+	<button id="btnFadetoggle">fadetoggle</button>
+	<button id="btnSlideUp">slideUp</button>
+	<button id="btnSlideDown">slideDown</button>
+	<button id="btnSlideToggle">slideToggle</button>	
+	<div>어려울 때 친구가 진정한 친구다.</div>
+		
+	
+</body>
+</html>

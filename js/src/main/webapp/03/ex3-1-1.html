@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>조건문(if)</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var score = Number(prompt("점수를 입력해주세요."));
+            document.write("점수: " + score + "<br>");
+            if (90 <= score && score <= 100) {
+                document.write("A학점입니다.");
+            } else if (80 <= score && score <= 89) {
+                document.write("B학점입니다.");
+            } else if (70 <= score && score <= 79) {
+                document.write("C학점입니다.");
+            } else if (60 <= score && score <= 69) {
+                document.write("D학점입니다.");
+            } else if (0 <= score && score <= 59) {
+                document.write("F학점입니다.");
+            } else {
+                document.write("잘못하셨습니다.");
+            }
+        </script>
+    </body>
+</html>

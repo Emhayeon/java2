@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex6-3</title>
+</head>
+<body>
+<script>
+	//생성자 함수를 이용한 객체 생성
+	//제조사, 모델명, 연식
+	function Car(company, model, year){
+		this.company = company;
+		this.model = model;
+		this.year = year;
+	}
+	
+	//new 생성자함수(). {} -객체 리터럴
+	var myCar = new Car("현대","제네시스",2023);
+	var yourCar = new Car("삼성","QM6",2022);
+	
+	document.write(myCar.company+"/"+myCar.model+"/"+myCar.year);
+	document.write("<br>");
+	document.write(yourCar.company+"/"+yourCar.model+"/"+yourCar.year);
+</script>
+</body>
+</html>

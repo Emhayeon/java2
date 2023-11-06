@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex6-9.html</title>
+</head>
+<body>
+	<button type="button" onclick="openWin();">새 창 열기</button>
+	<button type="button" onclick="resizeWin();">창 크기 조절</button>
+<script>
+	var newWindow = null; 
+	function openWin(){
+		newWindow = window.open("popup.html","mycat","width=310, height=480, left=200, top=100, scrollbars=no");  //(파일명, 새창이름, 옵션)
+	}
+	function resizeWin() {
+		newWindow.resizeTo(150, 240);
+		//newWindow.focus();
+	}
+</script>
+</body>
+</html>

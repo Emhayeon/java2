@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex9-1.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("button").click(function(){
+		//*:모든(all)
+		//$("*").css("border","2px solid red");
+		//#:id , .:class, 이름 : 태그, 그룹:,
+		
+		//>:자식(한단계 하위의 엘리먼트)
+		//$("div > p").css("border","2px solid red");
+		
+		//공백 : 자손(자식+후손)
+		//$("body p").css("border","2px solid red");
+		
+		//:eq(index):index와 같은 인덱스는 0부터 시작
+		//$("li:eq(1)").css("border","2px solid red");
+		
+		//:first->첫번째
+		//$("li:first").css("border","2px solid red");
+		
+		//:last ->마지막
+		//$("li:last").css("border","2px solid red");
+		
+		//:even->인덱스가 짝수번째(0,2,4....)->1랑3색칠(1~4로 적음 1=0)
+		//$("#t1 tr:even").css("background-color", "yellow");
+		
+		//:odd->인덱스가 홀수번째(1,3,5....)->2랑4색칠(1~4로 적음 1=0)
+		//$("#t1 tr:odd").css("background-color", "yellow");
+		
+		
+	});
+});
+</script>
+</head>
+<body>
+	<p>여기는 p</p>
+	<h2>여기는 h2</h2>
+	<div>여기는 div
+		<p>여기도 p</p>
+	</div>
+	<ul>
+		<li>항목 1</li>
+		<li>항목 2</li>
+	</ul>
+	<table id="t1" border="1">
+		<tr>
+			<td>td 1</td>
+		</tr>
+		<tr>
+			<td>td 2</td>
+		</tr>
+		<tr>
+			<td>td 3</td>
+		</tr>
+		<tr>
+			<td>td 4</td>
+		</tr>
+	</table>
+	<button type="button">클릭</button>
+</body>
+</html>

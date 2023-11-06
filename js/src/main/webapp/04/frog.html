@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>반복문 - 개구리 우물</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var day = 0;
+            var now = 0;
+            while (true) {
+                day++;
+                console.log(day + "일차");
+                now += 5;
+                console.log("현재위치-올라감: " + now);
+                
+                // 탈출 조건
+                if (now > 1500) {
+                    console.log("탈출");
+                    break;
+                }
+                now -= 2;
+                console.log("현재위치-내려옴: " + now);
+            }
+        </script>
+    </body>
+</html>

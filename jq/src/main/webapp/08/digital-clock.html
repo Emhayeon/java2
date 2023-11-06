@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>digital-clock.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+
+$(function() {
+
+	function make2digits(val) {
+		if (val < 10) {
+			val = "0" + val;
+		}
+		return val;
+	}
+
+	setInterval(function() {
+		// console.log("Hello");
+		var d = new Date();
+		console.log(d);
+		var hour = make2digits(d.getHours());
+		var minute = make2digits(d.getMinutes());
+		var second = make2digits(d.getSeconds());
+		/*
+		if (hour < 10) {
+			hour = "0" + hour;
+		}
+		if (minute < 10) {
+			minute = "0" + minute;
+		}
+		if (second < 10) {
+			second = "0" + second;
+		}
+		*/
+		// 00:00:00
+		var strTime = hour + ":" + minute + ":" + second;
+		// console.log(strTime);
+		$("h1").text(strTime);
+	}, 1000);
+});
+</script>
+</head>
+<body>
+	<h1></h1>
+</body>
+</html>

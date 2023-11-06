@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-2-1</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("img").mouseenter(function(){
+		$(this).attr("src","../images/dog.png"); //"img"써도되는데 this활용해
+	});
+	$("img").mouseleave(function(){
+		$(this).attr("src","../images/cat.png");
+	});
+});
+	
+</script>
+</head>
+<body>
+	<div><img src="../images/cat.png"></div>
+</body>
+</html>

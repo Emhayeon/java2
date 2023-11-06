@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>date.html</title>
+</head>
+<body>
+	<div class="a">동해물과</div>
+	<div>백두산이</div>
+	<p class="a">마르고</p>
+	<p>닳도록</p>
+	<h3 id="h3-1" class="a">하느님이</h3>
+	<h3>보우하사</h3>
+	<h3>우리나라</h3>
+	<h3>만세</h3>
+<script>
+	var d = new Date();//현재시각
+	console.log(d);
+	var d2 = new Date(2023, 1,1,9,50,45);//2023/2/1 9:50:45 월 값이 하나 작다
+	console.log(d2);
+	var d3 = new Date(2023,1,1);//2023/2/1/ 0:0:0
+	console.log(d3);
+	
+	
+	var year = d.getFullYear(); //년도를 구한다.
+	var month = d.getMonth()+1;//월(0~11)
+	var date = d.getDate();
+	var hour = d.getHours();
+	var minute = d.getMinutes();
+	var second = d.getSeconds();
+	var now = year +"/"+month+"/"+date+"";
+	now += hour+":"+minute+":"+second;
+	console.log(now); //2023/10/10 9:33:29
+	
+	
+	var h3_1 = document.getElementById("h3-1");//id부여한건 하나씩 찾는거
+	console.log(h3_1);
+	h3_1.style.backgroundColor = "yellow";
+	
+	var divs = document.getElementsByTagName("div");//배열을 반환
+	console.log(divs);
+	//divs.style.backgroundColor = "red";//오류뜸 배열에 작업
+	for(var i = 0; i<divs.length; i++){
+		console.log("i:",divs[i]);
+		divs[i].style.backgroundColor = "red";
+	} //엘리먼트에 작업해야함
+	
+	var as = document.getElementsByClassName("a"); //배열반환 for문 써서 작업해야함
+	console.log(as); 
+</script>
+</body>
+</html>

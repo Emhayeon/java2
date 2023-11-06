@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex08-attr.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#btnmeong").click(function(){
+			$("#image").attr("src","../images/dog.png");
+		 	
+		});
+		$("#btnmeow").click(function(){
+			$("#image").attr("src","../images/cat.png");
+		 	
+		});
+	});
+	
+	/*$("button").click(function(){
+		console.log(this);
+		var image = $(this).attr("data-image");
+		$("image").attr("src","../images"+image+".png");
+		
+	});*/
+</script>
+</head>
+<body>
+
+<button type="button" id="btnmeong" data-image="dog">강아지</button> 
+<button type="button" id="btnmeow" data-image="cat">고양이</button>
+<div><img id="image"></div>
+
+
+</body>
+</html>

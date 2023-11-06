@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-12.html</title>
+<style>
+	div{
+		width: 150px;
+		height: 150px;
+		background-color: lightpink;
+		position: absolute;
+		left: 50px;
+		top:50px;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#btnAnim").click(function(){
+		$("div").animate({
+			"left" : "300px",
+			"top" : "300px",
+			"opacity" : 0
+		}, 5000, function(){
+			alert("이동됨");
+		});
+	});
+});	
+</script>
+</head>
+<body>
+	<button id="btnAnim">Animation</button>
+	<button>Reset</button>
+	<div></div>
+</body>
+</html>

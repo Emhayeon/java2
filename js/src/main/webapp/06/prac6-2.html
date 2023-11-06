@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function Person(no, name, position, age, money){
+		this.no= no;
+		this.name= name;
+		this.position=position;
+		this.age= age;
+		this.money=money;
+	}	
+	var an= new Person(1,"안진수","부장",52,5000000);
+	var hong= new Person(2,"홍지영","사원",28,3000000);
+	
+	document.write(an.no+","+an.name+":"+an.position+","+an.age+","+an.money);
+	document.write("<br>");
+	document.write(hong.no+","+hong.name+":"+hong.position+","+hong.age+","+hong.money);
+
+</script>
+
+</body>
+</html>

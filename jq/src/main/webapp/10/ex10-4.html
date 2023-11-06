@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-4.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("input[name=id]").focus(function(){
+		$(this).css("background-color","yellow");
+	});
+	$("input[name=id]").blur(function(){
+		$(this).css("background-color","pink");
+	});
+	$("select[name=year]").change(function(){
+		var year = $(this).val();
+		$("input[name=id]").val(year).focus();
+	});
+	$("form").submit(function(){
+		var v = confirm("정말 전송하시겠어요?");
+		console.log(v);
+		if(v == false){
+			return false;
+		}
+		
+	});
+});	
+</script>
+</head>
+<body>
+	<div>
+		<form>
+			<input type="text" name="id"><br>
+			<select name="year">
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+				<option value="2022">2022</option>
+			</select><br>
+			<button type="submit">전송</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-0.html</title>
+<style>
+	div{
+		background-color: yellow;
+		cursor:pointer;
+	}
+	
+	p{
+		background-color: lightpink;
+		cursor: pointer;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	//var div = $("div").clone();
+	//$("p").append(div);
+	
+	//현재 div 엘리먼트에 클릭이벤트 '설정'
+	/*
+	$("div").click(function(){
+		var v = $(this).clone();
+		$(this).after(v);
+	});
+	*/
+	
+	//div엘리먼트에 클릭이벤트 '등록' n번째눌러도 동작함
+	//등록의 기준은 상위 엘리먼트에 한다.
+	$("body").on("click","div",function(e){	
+		console.log(e.pageX+","+e.pageY);	
+		var v = $(this).clone();
+		$(this).after(v);
+	});
+	
+	//여러개의 이벤트를 한번에 등록
+	$("p").on({
+		"click" : function(){ console.log("click");},
+		"dbclick": function(){ console.log("dbclick");},
+		"mouseenter": function(){ console.log("mouseenter");},
+		"mouseleave": function(){ console.log("mouseleave");},
+	});
+});	
+</script>
+</head>
+<body>
+	<div>Hello</div>
+	<p>Hello - p</p>
+</body>
+</html>

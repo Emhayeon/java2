@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ex4-11</title>
+        <meta charset="utf-8">
+       
+    </head>
+    <body>
+        <div id="contents">
+
+        </div>
+        <script>
+             //배열과 반복문(for)
+             var colors = ["red","green","blue","yellow","skyblue"];
+             var span = "";
+             for(var i = 0; i < colors.length; i++) {
+                span += "<span style='color:"+colors[i]+"'>안녕하세요</span>";
+            } 
+             document.getElementById("contents").innerHTML=span;
+            
+        </script>
+    </body>
+</html>

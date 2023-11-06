@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex8-4.html</title>
+<script src="../js/jquery.js"></script> 
+<script>
+$(function(){
+	$("#btn1").click(function(){
+		var t = $("p").text();
+		$("h3").text(t);
+	});
+	
+	$("#btn2").click(function(){
+		var h=$("p").html(); //innerHTML와 같음
+		//$("h3").html(h);
+		$("h3").text(h);//태그를 텍스트로 처리한다.
+	});
+	$("#btn3").click(function(){
+		var v = $("#txt1").val();
+		$("#txt2").val(v);
+	});
+	
+	$("h3").click(function(){
+		var t = $("#btn1").attr("type");
+		console.log(t);
+		$("#btn2").attr("type","reset");
+
+	});
+});	
+</script>
+</head>
+<body>
+	<div>
+		<h3 style="cursor: pointer;">요소 내용 가져오기</h3>
+		<p>동해물과 <span style="background-color:red;">백두산이</span></p>
+	</div>
+	<button type="button" id="btn1">텍스트 가져오기</button>
+	<button type="button" id="btn2">HTML 가져오기</button>
+	<hr>
+	<input type="text" id="txt1"><br>
+	<button type="button" id="btn3">복사하기</button><br>
+	<input type="text" id="txt2"><br>
+</body>
+</html>

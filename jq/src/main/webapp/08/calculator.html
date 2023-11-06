@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calculator.html</title>
+<style>
+	table, td {
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	
+	button {
+		width: 40px;
+		height : 40px;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function() {
+	var firstNum = "";
+	var op = "";
+	
+	$(".btnNum").click(function() {
+		var numBtn = $(this).text();
+		var numInput = $("input").val();
+		var num = numInput + numBtn;
+		console.log(num);
+		$("input").val(num);
+	}); // $(".btnNum").click
+	
+	$(".btnOp").click(function() {
+		op = $(this).text();
+		firstNum = $("input").val();
+		$("input").val("");
+	}); //$(".btnOp").click
+	
+	$("#btnEqual").click(function() {
+		var result = "";
+		switch (op) {
+			case "+":
+				result = parseInt(firstNum) + parseInt($("input").val());
+				break;
+			case "-":
+				result = parseInt(firstNum) - parseInt($("input").val());
+				break;
+			case "*":
+				result = parseInt(firstNum) * parseInt($("input").val());
+				break;
+			case "/":
+				result = parseInt(firstNum) / parseInt($("input").val());
+				break;
+		} //switch, parseInt를 써서 글자로 인식한 값을 숫자로 인식하게 함
+		
+		$("input").val(result);
+	}); // $("#btnEqual").click
+	
+	$("#btnDel").click(function() {
+		var num = $("input").val();
+		var str = num.slice(0, num.length - 1); 
+		console.log("str:", str);
+		$("input").val(str);
+	});//$("#btnDel").click
+}); // $(function()
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="4"><input type="number"></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="btnNum">1</button></td>
+			<td><button type="button" class="btnNum">2</button></td>
+			<td><button type="button" class="btnNum">3</button></td>
+			<td><button type="button" class="btnOp">+</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="btnNum">4</button></td>
+			<td><button type="button" class="btnNum">5</button></td>
+			<td><button type="button" class="btnNum">6</button></td>
+			<td><button type="button" class="btnOp">-</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="btnNum">7</button></td>
+			<td><button type="button" class="btnNum">8</button></td>
+			<td><button type="button" class="btnNum">9</button></td>
+			<td><button type="button" class="btnOp">*</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="btnNum">0</button></td>
+			<td><button type="button" id="btnDel">Del</button></td>
+			<td><button type="button" id="btnEqual">=</button></td>
+			<td><button type="button" class="btnOp">/</button></td>
+		</tr>
+	</table>
+</body>
+</html>

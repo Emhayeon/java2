@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<title>환영</title>
+		<script>
+		function light_on() {
+			document.getElementById("myimage").src = "light_on.png";
+		}
+		function light_off() {
+			document.getElementById("myimage").src = "light_off.png";
+		}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="light_on()">켜기</button>
+		<button type="button"onclick="light_off()">끄기</button>
+		<img src="light_off.png" id="myimage">
+	</body>
+</html>

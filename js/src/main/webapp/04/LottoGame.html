@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lotto 6/45</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>===== Lotto 6/45 ======</h1>
+        <!-- horizontal ruler -->
+        <hr>
+        <!-- 금액, 숫자를 입력 받음 -->
+        <div>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <th>금액</th>
+                        <td><input type="number"
+                                id="money"></td>
+                    </tr>
+                    <tr>
+                        <th>게임수</th>
+                        <td><input type="number"
+                                id="count"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 버튼 부분 -->
+        <div>
+            <button type="button" onclick="start();">주세요</button>
+        </div>
+
+        <!-- 생성된 로또 번호 출력 -->
+        <div id="resultDiv">
+
+        </div>
+
+        <!-- 거스름돈 -->
+        <div id="changeDiv">
+
+        </div>
+        <script>
+            var nums = [];
+            var money = 0;
+            var count = 0;
+
+            function start() {
+                // 거스름돈 출력
+                printChange();
+
+                // 로또 생성
+                makeLotto();
+
+                var table = "<table border='1'>";
+                
+                
+                for (var i = 0; i < count; i++) {
+                    // 공 섞기
+                    shuffle();
+                    // 여섯개 빼내기
+                    
+                    var tr = take6(i + 1); // td 6개
+                    table += tr;
+                }
+                table += "</table>";
+
+                console.log("table:", table);
+                document.getElementById("resultDiv").innerHTML = table;
+            }
+
+            function take6(n) {
+                if (count > 0) {
+                    var numData = "<tr>";
+                    numData += "<td>" + n + "</td>";
+                    numData += "<td>";
+                    for (var i = 0; i < 6; i++) {
+                        var strNum = "" + nums[i];
+                        if (nums[i] < 10) {
+                            strNum = "0" + strNum;
+                        }
+                        numData += strNum + " ";
+                    }
+                    numData += "</td>";
+                    numData += "</tr>";
+                    console.log("numData:", numData);
+                    return numData;
+                } else {
+                    alert("게임수는 1회 이상 입력하세요");
+                } // if
+                
+            } // take6()
+
+            function shuffle() {
+                for (var i = 0; i < nums.length * 2; i++) {
+                    var rand = parseInt(Math.random() * 44) + 1;
+                    var temp = nums[0];
+                    nums[0] = nums[rand];
+                    nums[rand] = temp;
+                }
+                console.log("after nums:", nums);
+            }
+
+            function makeLotto() {
+                
+                for (var i = 0; i < 45; i++) {
+                    nums[i] = i + 1;
+                }
+                console.log("nums:", nums);
+            }
+
+            function printChange() {
+                console.log("start 실행됨");
+                money = parseInt(document.getElementById("money").value);
+                count = parseInt(document.getElementById("count").value);
+                console.log("money:", money);
+                console.log("count:", count);
+                var change = money - (1000 * count);
+                console.log("change:", change);
+                document.getElementById("changeDiv").innerHTML 
+                    = "거스름돈: " + change + "원";
+            }
+
+            
+        </script>
+    </body>
+</html>

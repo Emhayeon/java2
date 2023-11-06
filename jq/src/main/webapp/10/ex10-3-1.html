@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-3-1</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#txt1").keyup(function(){
+		//console.log("keypress");
+		var v = $(this).val();
+		console.log(v);
+		$("#txt2").val(v);
+	});	
+});	
+</script>
+</head>
+<body>
+	<div>
+		<input type="text" id="txt1"><br>
+		<input type="text" id="txt2"><br>
+		
+	</div>
+
+</body>
+</html>

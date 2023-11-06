@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+        <head>
+            <title>가위 바위 보</title>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>
+                            <button type="button" onclick="takeScissors();">가위</button>
+                            <button type="button" onclick="takeRock();">바위</button>
+                            <button type="button" onclick="takePaper();">보</button>
+                        </th>
+                        <th>Computer</th>
+                            
+                    </tr>
+ 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="default.jpg" id="userImage"></td>
+                        <td><img src="default.jpg" id="resultImage" ></td>
+                        <td><img src="default.jpg" id="comImage"></td>
+                 
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="0" id="winCount"></td> 
+                        <td><input type="number" value="0" id="drawCount"></td> 
+                        <td><input type="number" value="0" id="loseCount"></td> 
+
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <script>
+                function takeScissors(){
+                    document.getElementById("userImage").src = "scissors.png";
+                    var comNum = parseInt(Math.random()*3)+1;
+                    switch(comNum){
+                        case 1: //가위
+                            document.getElementById("comImage").src = "scissors.png";
+                            document.getElementById("resultImage").src = "draw.png";
+                            var count = document.getElementById("drawCount").value;
+                            count++;
+                            document.getElementById("drawCount").value = count;
+                            break;
+                        case 2: //바위
+                             document.getElementById("comImage").src = "rock.png";
+                             document.getElementById("resultImage").src = "lose.png";
+                             var count = document.getElementById("loseCount").value;
+                            count++;
+                            document.getElementById("loseCount").value = count;
+                            break;
+                        case 3: //보
+                            document.getElementById("comImage").src = "paper.png";
+                            document.getElementById("resultImage").src = "win.png";
+                            var count = document.getElementById("winCount").value;
+                            count++;
+                            document.getElementById("winCount").value = count;
+                            break;
+                    }
+                }
+                function takeRock(){
+                    document.getElementById("userImage").src = "rock.png";
+                    var comNum = parseInt(Math.random()*3)+1;
+                    switch(comNum){
+                        case 1: //가위
+                            document.getElementById("comImage").src = "scissors.png";
+                            document.getElementById("resultImage").src = "win.png";
+                            var count = document.getElementById("winCount").value;
+                            count++;
+                            document.getElementById("winCount").value = count;
+                            break;
+                        case 2: //바위
+                             document.getElementById("comImage").src = "rock.png";
+                             document.getElementById("resultImage").src = "draw.png";
+                             var count = document.getElementById("drawCount").value;
+                            count++;
+                            document.getElementById("drawCount").value = count;
+                            break;
+                        case 3: //보
+                            document.getElementById("comImage").src = "paper.png";
+                            document.getElementById("resultImage").src = "lose.png";
+                            var count = document.getElementById("loseCount").value;
+                            count++;
+                            document.getElementById("loseCount").value = count;
+                            break;
+                    }
+                }   
+                function takePaper(){
+                    document.getElementById("userImage").src = "paper.png";
+                    var comNum = parseInt(Math.random()*3)+1;
+                    switch(comNum){
+                        case 1: //가위
+                            document.getElementById("comImage").src = "scissors.png";
+                            document.getElementById("resultImage").src = "lose.png";
+                            var count = document.getElementById("loseCount").value;
+                            count++;
+                            document.getElementById("loseCount").value = count;
+                            break;
+                        case 2: //바위
+                             document.getElementById("comImage").src = "rock.png";
+                             document.getElementById("resultImage").src = "win.png";
+                             var count = document.getElementById("winCount").value;
+                            count++;
+                            document.getElementById("winCount").value = count;
+                            break;
+                        case 3: //보
+                            document.getElementById("comImage").src = "paper.png";
+                            document.getElementById("resultImage").src = "draw.png";
+                            var count = document.getElementById("drawCount").value;
+                            count++;
+                            document.getElementById("drawCount").value = count;
+                            break;
+                    }
+
+                }
+                function test() {
+                    document.getElementById("userImage").src = "scissors.png"
+                    var count = document.getElementById("winCount").value;
+                    count++;
+                    document.getElementById("winCount").value = count;
+                
+                }
+                
+
+            </script>
+
+        </body>
+
+</html>

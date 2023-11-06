@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>쓰기</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <!-- HTML 주석-->
+        <!-- <button type="button" onclick="write()">읽기</button> -->
+        <button type="button" onclick="mywrite();">쓰기</button>
+        <!-- paragraph(문단) -->
+        <p id="myp"></p>
+        <script>
+            // 화면에 안녕하세요 출력
+            function mywrite() {
+                // document.write("안녕하세요"); // 거의 쓰이지 않는다.(새로 쓰기)
+                document.getElementById("myp").innerHTML = "안녕하세요";
+            }
+            
+        </script>
+    </body>
+</html>

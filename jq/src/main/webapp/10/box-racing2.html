@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>box-racing.html</title>
+<style>
+	.divBox {
+		width: 80px;
+		height: 80px;
+		position: relative;
+		left: 50px;
+		background-color: red;
+		font-size: 40px;
+	}
+	
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function() {
+	var boxes = $(".divBox");
+	var colors = ["red", "green", "blue", "cyan", "magenta"];
+	const FINISH = "1000px";
+	var rank = 0;
+	
+	function init() {
+		for (var index = 0; index < boxes.length; index++) {
+			var box = $(boxes[index]);
+			box.css("background-color", colors[index]);
+			box.css("top", (50 * index + 10) + "px");
+		}
+	}
+	
+	function getDuration() {
+		return parseInt(Math.random() * 4000) + 1000;
+	}
+	
+	
+	$("button").click(function() {
+		boxes.each(function(index) {
+			console.log(index + ":" , $(this));
+			$(this).animate({
+				left: FINISH
+			}, getDuration(), function() {
+				$(this).text(++rank);
+			});
+		});
+		/*
+		for (var index = 0; index < boxes.length; index++) {
+			var box = $(boxes[index]);
+			var rank = 0;
+			box.animate({
+				left: FINISH
+			}, getDuration(), function() {
+				// console.log(++rank);
+				console.log(box);
+				$(this).text(++rank);
+			});
+		}
+		*/
+	});
+	
+	init();
+	
+});
+</script>
+</head>
+<body>
+	<button type="button">START</button>
+	<div class="divBox"></div>
+	<div class="divBox"></div>
+	<div class="divBox"></div>
+	<div class="divBox"></div>
+	<div class="divBox"></div>
+</body>
+</html>

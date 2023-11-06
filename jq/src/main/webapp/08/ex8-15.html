@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex8-15.html</title>
+<style>
+	.red{
+		background-color: red;
+		color: white;
+	}
+	.blue{
+		background-color:skyblue;
+		color: white;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#btnRed").click(function(){
+		//$("h2").css("color","white");
+		//$("h2").css("background-color","red");
+		//메서드 체이닝 방식
+		$("h2").css("color","white")
+			   .css("background-color","red")
+			   .append("<span>Hello</span>");
+	});
+	$("#btnBlue").click(function(){
+		//객체 지정 방식 (하나의 함수에 대해 여러작업을함)-{}
+		$("p").css({
+			"color":"yellow",
+			"background-color":"blue",
+			"border": "2px dashed magenta"
+		});
+	});
+});	
+</script>
+</head>
+<body>
+	<h2>제목 1</h2>
+	<p>단락 1</p>
+	<h2>제목 2</h2>
+	<p>단락 2</p>
+	<button type="button" id="btnRed">RED</button>
+	<button type="button" id="btnBlue">BLUE</button>
+</body>
+</html>

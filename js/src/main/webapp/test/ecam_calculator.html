@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>간단 계산기</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function add(x ,y){
+                return x +y;
+            }
+            function sub(x ,y){
+                return x -y;
+            }
+            function mul(x ,y){
+                return x *y;
+            }
+            function div(x ,y){
+                return parseInt(x /y);
+            }
+            function mod(x ,y){
+                return x %y;
+            }
+
+            var num1 = Number(prompt("숫자1: "));
+            var num2 = Number(prompt("숫자2: "));
+            document.write("*** 간단 계산기 ***<br>");
+            document.write("덧셈: " + num1 + "+" + num2 + "=" + add(num1,num2)+"<br>");
+            document.write("뺄셈: " + num1 + "-" + num2 + "=" + sub(num1,num2)+"<br>");
+            document.write("곱셈: " + num1 + "*" + num2 + "=" + mul(num1,num2)+"<br>");
+            document.write("나눗셈: " + num1 + "/" + num2 + "=" + div(num1,num2)+"<br>");
+            document.write("나머지: " + num1 + "%" + num2 + "=" + mod(num1,num2)+"<br>");
+        </script>
+    </body>
+</html>

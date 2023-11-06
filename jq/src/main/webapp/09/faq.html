@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="UTF-8">
+<title>faq.html</title>
+<style>
+	.q {
+		cursor: pointer;
+	}
+	.red {
+		border: 2px solid red;
+	}
+	.a{
+		display: none;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$(".q").click(function() {
+		/*
+		console.log("클릭");
+		$(".a").removeClass("red");
+		$(this).next().addClass("red");
+		*/
+		$(".a").slideUp(500);
+		$(this).next().slideDown(500);
+	});
+	
+});	
+</script>
+</head>
+<body> 
+	
+	<h1>FAQ</h1>
+	<hr>
+	<div class="q">Q.반품은 가능한가요?</div>
+	<div class="a">A.안됩니다.</div>
+	<div class="q">Q.환불은 가능한가요?</div>
+	<div class="a">A.안됩니다.</div>
+	<div class="q">Q.교환은 가능한가요?</div>
+	<div class="a">A.됩니다.</div>
+	
+	
+	
+</body>
+</html>

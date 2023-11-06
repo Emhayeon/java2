@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Q4-5 구구단</title>
+        <meta charset="utf-8">
+       
+    </head>
+    <body>
+       
+        <div id="guguDiv"></div>            
+        
+        <script>
+			var table = "<table border='1'>";
+			table += "<tbody>";
+			table += "<tr>";
+			for(var v = 2; v <= 9; v++) {
+				table += "<th>" + v +"단</th>";
+			}
+			table += "</tr>";
+			
+			for(var w = 1; w <= 9; w++){
+				table += "<tr>";	
+				for(var v =2; v <= 9; v++) {
+					table += "<td>"+ v +" * "+ w +" = " +(v*w) + "</td>";
+				}
+				table += "</tr>";
+			}
+			
+			table +="</tr>";
+			
+			table += "</tbody>";
+			table += "</table>";
+			
+			document.getElementById("guguDiv").innerHTML = table;
+            
+        </script>
+    </body>
+</html>

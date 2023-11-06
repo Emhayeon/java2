@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-12.html</title>
+<style>
+	div{
+		width: 100px;
+		height: 100px;	
+		left:50px;
+		top:50px;
+		position: absolute;	
+	}
+	#box1{
+		background-color: indianred;
+		top:70px;
+	}
+	
+	#box2{
+		background-color: lightblue;
+		top: 180px;
+	}
+	
+	#box3{
+		background-color: sandybrown;
+		top: 290px;
+	}
+	
+	#box4{
+		background-color: lightgreen;
+		top: 400px;
+	}
+	
+	#box5{
+		background-color: mediumpurple;
+		top: 510px;
+	}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	
+	var boxes = $("div");
+	const finsh = 1000;
+	
+	function getDuration() {
+		return parseInt((Math.random() * 4000) + 1000);
+	}
+	
+	
+	$("#btnSta").click(function(){
+		for (var index = 0; index < boxes.length; index++ ){
+			var box =$(boxes[index]);
+			var rank = 0;
+			box.animate({ 
+				"left": finsh},getDuration(),function(){
+					//console.log(++rank);
+					console.log(box);
+					$(this).text(++rank); //for문이 끝나서 box라고 적으면 마지막 박스에 인식함 'this'
+				});
+		}
+		
+		/*$("#box1").animate({
+			"left" : "1000px"
+		}, getDuration());
+		$("#box2").animate({
+			"left" : "1000px"
+		}, getDuration());
+		$("#box3").animate({
+			"left" : "1000px"
+		}, getDuration());
+		$("#box4").animate({
+			"left" : "1000px"
+		}, getDuration());
+		$("#box5").animate({
+			"left" : "1000px"
+		}, getDuration());*/
+	});
+});
+	
+</script>
+</head>
+<body>
+	<button type="button" id="btnSta">START</button>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="box3"></div>
+		<div id="box4"></div>
+		<div id="box5"></div>
+		
+</body>
+</html>

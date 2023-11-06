@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>구구단</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <div>
+            <input type="number" id="dan">
+            <span>단</span>
+            <button type="button" onclick="runGugu();">실행</button>
+        </div>
+
+        <!-- 테이블이 들어갈 공간-->
+        <div id="targetDiv">
+            
+        </div> 
+        
+        <script>
+            function runGugu() {
+                // console.log("runGugu 실행됨");
+                var v = document.getElementById("dan");
+                // console.log(v);
+                var num = parseInt(v.value);
+                console.log(num);
+
+                var table = "<table border='1'>";
+                table += "<tbody>";
+
+                for(var count = 1; count <= 9; count++) {
+                    table += "<tr>";
+                    table += "<td>" + num + " * " + count + "</td>";
+                    table += "<td>" + (num * count) +"</td>";
+                    table += "</tr>";
+                }
+
+
+                table += "</tbody>";
+                table += "</table>";
+
+                var target = document.getElementById("targetDiv");
+                // console.log(target);
+                target.innerHTML = table;
+
+            }
+        </script>
+    </body>
+</html>

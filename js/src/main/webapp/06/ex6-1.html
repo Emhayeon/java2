@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var person = {
+	name : "홍길동",
+	age : 25,
+	sayHello : function() {
+		document.write("안녕하세요.<br>" + this.name +"입니다."); //self대신 this를 사용:나자신
+	}
+};	
+console.log(person.name);
+console.log(person.age);
+person.sayHello();
+</script>
+</body>
+</html>

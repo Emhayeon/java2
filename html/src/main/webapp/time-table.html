@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	table, th, td{
+		border: 1px, solid black;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	table{
+		width: 500px;
+		height: 300px;
+	}
+	.day{
+		color: white;
+		background-color: red;
+		
+	}
+	.time{
+		background-color: skyblue;
+		color:azure;
+		width:100px ;
+	}
+	.kor {
+			background-color: yellow;
+		}
+	
+	.eng {
+		background-color: orange;
+	}
+	
+	.math {
+		background-color: hotpink;
+	}
+	
+	.society {
+		background-color: tomato;
+	}
+	
+	.music {
+		background-color: royalblue;
+	}
+	
+	.art {
+		background-color: peru;
+	}
+	
+	.physic {
+		background-color:greenyellow;
+	}
+</style>
+<meta charset="UTF-8">
+<title>time-table.html</title>
+</head>
+<body>
+<table border="1">
+
+	<tr>
+		<th> </th>
+		<th class="day">월</th>
+		<th class="day">화</th>
+		<th class="day">수</th>
+		<th class="day">목</th>
+		<th class="day">금</th>
+	</tr>
+	<tr>
+		<th class="time">1 </th>
+		<td rowspan="2" class="kor">국어</td>
+		<td colspan="2" rowspan="2" class="eng">영어</td>
+		<td class="math">수학</td>
+		<td rowspan="2" class="physic">체육</th>
+	</tr>
+	<tr>
+		<th class="time">2</th>
+		<td class="music">음악</td>
+		
+	</tr>
+	<tr>
+		<th class="time">3</th>
+		<td class="eng">영어</td>
+		<td class="kor">국어</td>
+		<td colspan="2" class="art">미술</td>
+		<td class="kor">국어</td>		
+	</tr>
+	<tr>
+		<th class="time">4</th>
+		<td colspan="2" class="math">수학</td>
+		<td class="society">사회</td>
+		<td class="physic">체육</td>
+		<td class="eng">영어</td>
+	</tr>
+
+</table>
+</body>
+</html>

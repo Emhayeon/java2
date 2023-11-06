@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>배열 테스트</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // = 을 기준으로 오른쪽의 값을 왼쪽에 넣는다(저장).
+            // 왼쪽은 생략할 수 있다.
+            // 값을 복사해서 덮어쓰기를 한다.
+            // 한번에 하나씩 작업(레지스터)
+            var nums = []; // new Array()
+            for (var i = 0; i < 45; i++) {
+                nums[i] = i + 1; // [1]
+            }
+            
+            
+            console.log(nums); // [1, ...., 45]
+
+            // 섞기(suffle)
+            for (var i = 0; i < nums.length * 2; i++) {
+                // [1] ~ [44] 중에 임의의 위치를 고른다.
+                var rand = parseInt(Math.random() * 44) + 1;
+                // swapping
+                var temp = nums[0];
+                nums[0] = nums[rand];
+                nums[rand] = temp;
+            } // for
+            console.log(nums);
+
+            for (var i = 0; i < 6; i++) {
+                document.write(nums[i] + " ");
+            }
+        </script>
+    </body>
+</html>

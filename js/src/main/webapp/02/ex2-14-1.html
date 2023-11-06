@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>점수계산</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+       
+        <script>
+            var kor = prompt("국어 점수를 입력하세요");
+            var eng = prompt("영어 점수를 입력하세요");
+            var math = prompt("수학 점수를 입력하세요");
+            var numkor = Number(kor);
+            var numeng = Number(eng);
+            var nummath = Number(math);
+            var scores = {
+                "kor" : numkor,
+                "eng" : numeng,
+                "math" : nummath
+            };
+
+            var total = scores.kor + scores.eng + scores.math;
+            var average = total / 3;
+            
+            document.write("총점:" + total + "<br>");
+            document.write("평균:" + average);
+            
+        </script>
+    </body>
+</html>

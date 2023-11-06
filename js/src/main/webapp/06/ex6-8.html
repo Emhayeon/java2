@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		background-color: skyblue;/*배경색*/
+		color: white;/*글자색*/
+		width: 200px;/*폭, 너비*/
+		padding:10px; /*안쪽여백*/
+		text-align: center;/*정렬*/
+	}
+</style>
+</head>
+<body>
+	<h2>클릭해보세요</h2>
+	<div onmouseover="over(this);"
+		 onmouseout="out(this);">마우스를 올려보세요</div>
+	
+<script>
+	function over(elim) {
+		console.log(elim);
+		elim.style.backgroundColor = "orange";
+	}
+	function out(elim) {
+		elim.style.backgroundColor = "skyblue";
+	}
+</script>	
+
+</body>
+</html>

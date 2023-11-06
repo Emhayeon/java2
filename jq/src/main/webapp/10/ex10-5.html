@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-5.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function() {
+	$(window).resize(function() {
+		var iWidth = window.innerWidth;
+		var iHeight = window.innerHeight;
+		var oWidth = window.outerWidth;
+		var oHeight = window.outerHeight;
+		
+		$("#innerWidth").text(iWidth);
+		$("#innerHeight").text(iHeight);
+		$("#outerWidth").text(oWidth);
+		$("#outerHeight").text(oHeight);
+	});
+	
+	$(window).scroll(function() {
+		alert("스크롤이 움직였어요");
+	});
+});
+</script>
+</head>
+<body>
+	<div>
+		innerWidth : <span id="innerWidth"></span>
+	</div>
+	<div>
+		innerHeight : <span id="innerHeight"></span>
+	</div>
+	<div>
+		outerWidth : <span id="outerWidth"></span>
+	</div>
+	<div>
+		outerHeight : <span id="outerHeight"></span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10-3.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#txtId").keydown(function(){
+			console.log("keydown");
+			$(this).css("background-color", "yellow");
+		});
+		$("#txtId").keyup(function(){
+			console.log("keyup");
+			$(this).css("background-color", "pink");
+		});
+		$("#passPw").keypress(function() {
+			console.log("keypress"); //글자 입력했을때만
+			$(this).css("background-color", "blue");
+	});
+});
+</script>
+</head>
+<body>
+	<div>
+		<label>-아이디:</label>
+		<input type="text" id="txtId"><br>
+		<label>-비밀번호:</label>
+		<input type="password" id="passPw">	
+	</div>
+
+</body>
+</html>

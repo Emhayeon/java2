@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	//배열을 정의
+	var animals =["사자","호랑이","사슴","펭귄"];
+	console.log(animals);
+	//console.log(animals.toString());
+	//console.log(typeof(animals));
+	//push()는 배열의 끝에 원소를 추가한다.
+	animals.push("기린");
+	//pop() 배열의 마지막 원소를 꺼낸다.
+	var v = animals.pop();
+	console.log("v:",v);
+	console.log(animals);
+	//splice(index, count,원소)-index 위치 부터 count갯수만큼 지우고 
+	//새로운 원소를 집어넣는다
+	animals.splice(2, 2, "원숭이");
+	console.log(animals);
+	animals.splice(2, 0, "곰");
+	console.log(animals);
+	//slice(beginIndex, endIndex)-배열의 일부분 얻어내기
+	animals.slice(1, 3);
+	console.log("v:",v);//호랑이 곰
+	console.log(animals);//['사자', '호랑이', '곰', '원숭이']
+	//sort()-오름차순 정렬(작은거부터큰거)
+	//글자는 사전순,숫자는 작은거~큰거
+	animals.sort();//['곰', '사자', '원숭이', '호랑이']
+	console.log(animals);
+	//reverse()-배열의 순서를 역전 재배치
+	animals.reverse();// ['호랑이', '원숭이', '사자', '곰']
+	console.log(animals);
+	var nums = [3,7,1,8,2];
+	nums.sort();
+	console.log(nums);
+	nums.reverse();
+	console.log(nums);
+</script>
+</body>
+</html>

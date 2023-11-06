@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jq02.html</title>
+<!--jQuery 라이브러리 로딩-->
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+	//$(document).ready(function(){
+		//jQuery() ->선책한 엘리먼트는 jQuery 객체집합으로 변환
+		console.log(jQuery);
+		console.log($);
+		//아이디로 찾기
+		$("#h3-1").css("background-color", "yellow");
+		//태그명으로 찾기
+		$("div").css("color","red");
+		//클래스명으로 찾기
+		$(".a").css("border","5px dashed");
+		
+		$("button").click(function() {
+			alert("클릭했어요");
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div class="a">동해물과</div>
+	<div>백두산이</div>
+	<p class="a">마르고</p>
+	<p>닳도록</p>
+	<h3 id="h3-1" class="a">하느님이</h3>
+	<h3>보우하사</h3>
+	<h3>우리나라</h3>
+	<h3>만세</h3>
+	<button type="button">클릭</button>
+<script>
+	//jQuery() ->선책한 엘리먼트는 jQuery 객체집합으로 변환
+	console.log(jQuery);
+	console.log($);
+	//아이디로 찾기
+	$("#h3-1").css("background-color", "yellow");
+	//태그명으로 찾기
+	$("div").css("color","red");
+	//클래스명으로 찾기
+	$(".a").css("border","5px dashed");
+	
+	$("button").click(function() {
+		alert("클릭했어요");
+	});
+	
+</script>
+</body>
+</html>

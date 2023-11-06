@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>점수계산</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- line break -->
+        동해물과<br> 백두산이
+        <!-- no blank space -->
+        마르고&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닳도록
+        <!-- HTML 주석 -->
+        <script>
+            // 한줄 주석
+            /*
+                여러줄 주석
+                여러줄 주석
+            */
+            // 점수 데이터를 하나의 객체 저장
+            var scores = {
+                "kor"  : 80, 
+                "eng"  : 90, 
+                "math" :100
+            };
+            // 합계(총점)
+            var total = scores.kor + scores.eng + scores.math;
+            console.log("총점: " + total);
+            document.write("<br>총점: " + total + "<br>");
+            // 평균: 총점/갯수
+            var average = total / 3;
+            console.log("평균: " + average);
+            document.write("평균: " + average);
+        </script>
+    </body>
+</html>

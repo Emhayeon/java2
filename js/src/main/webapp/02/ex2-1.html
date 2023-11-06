@@ -1,0 +1,21 @@
+<script>
+    /*
+    var a; // 선언, var: variable(변수)
+    a = 3; // 할당
+    var b = 5; // 선언 + 할당
+    console.log(a);
+    console.log(b);
+    */
+    
+    // 사용자로 부터 숫자를 2번 입력 받아서 덧셈 처리
+    var num1 = prompt("첫번째 숫자를 입력해주세요."); // 100
+    var num2 = prompt("두번째 숫자를 입력해주세요."); // 200
+    var result = num1 + num2; // 글자와의 + 는 덧셈이 아니고, 연결
+    console.log(result);
+    var nnum1 = Number(num1); // 변환 가능한 글자를 숫자로 변환
+    var nnum2 = Number(num2); // Number("백"):x
+    var nresult = nnum1 + nnum2;
+    console.log(nresult);
+    //console.log(num1); //글자(검정색)
+    //console.log(nnum1); // 숫자(파란색)
+    </script>

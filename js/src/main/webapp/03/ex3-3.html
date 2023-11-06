@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>조건문(if)</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- div : division -->
+        <div>여기는 div</div>
+        <!-- p : paragraph -->
+        <p>여기는 p</p>
+        <!-- h : heading -->
+        <h1>여기는 h1</h1><h2>여기는 h2</h2>
+        <h3>여기는 h3</h3>
+        <h4>여기는 h4</h4>
+        <h5>여기는 h5</h5>
+        <h6 style="font-size:60px">여기는 h6</h6>
+        <div>여기는 <span style="color:red">또다른</span> div <img src="../01/light_on.png"> </div>
+        <div id="target"></div>
+        <script>
+            // 아이디를 입력 받아서
+            // 아이디가 "admin" 이라면 (조건)
+            // 글쓰기 버튼을 보이도록 한다.
+            var id = prompt("아이디를 입력해주세요");
+            if (id == "admin") {
+                var target = document.getElementById("target");
+                target.innerHTML = "<button>글쓰기</button>";
+            }
+        </script>
+    </body>
+</html>

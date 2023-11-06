@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>           
+            <title>반복문 - break, continue</title> 
+            <mata charset="utf-8">
+            
+     </head>
+    <body>
+        <script>
+           //break;(아래의 문장을 실행하지 않고) 반복을 중단한다.
+          /*
+           for (var count = 1; count <= 10; count++) {
+                console.log("1:"+ count);
+                if (count == 5) {
+                    break;
+                }
+
+                console.log("2:" + count);
+           }
+           console.log("끝");
+           */
+          //continue;(아래의 문장을 실행하지 않고) 반복을 계속한다.
+
+           for (var count = 1; count <= 10; count++) {
+                console.log("1:"+ count);
+                if (count == 5) {
+                    continue;
+                }
+
+                console.log("2:" + count);
+           }
+           console.log("끝");
+        </script>
+        
+    </body>
+</html>

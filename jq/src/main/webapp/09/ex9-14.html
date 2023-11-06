@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex9-14.html</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	//parent()-한단계 위의 상위 엘리먼트
+	$("#li2").parent().css("border","2px solid red");
+	
+	//find()-자손 엘리먼트 찾기
+	$("#ul1").find(".class1").css("border","2px solid blue");
+	
+	//siblings()- 형제 엘리먼트
+	$("#li5").siblings().css("border","2px solid green");
+	
+	//prev()-바로 위의 형
+	$("#li5").prev().css("background-color","skyblue");
+	
+	//next()- 바로 아래 동생
+	$("#li5").next().css("background-color","magenta");
+
+	
+});
+</script>
+</head>
+<body>
+ 	<ul id="ul1">
+		<li class="class1">항목 1</li>
+		<li id="li2">항목 2</li>
+		<li>항목 3</li>
+	</ul>
+	<ul>
+		<li class="class1">항목 4</li>
+		<li id="li5">항목 5</li>
+		<li>항목 6</li>
+	</ul>
+</body>
+</html>
